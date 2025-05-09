@@ -26,6 +26,13 @@ Whenever you push a change to the GitHub repository, AWS CodePipeline automatica
 - **buildspec.yml** → defines build + deploy steps  
 - **HTML/CSS** → simple, modern landing page
 
+---
+
+## 📸 Screenshot
+
+![Screenshot](Screenshot%202025-05-08%20195931.png)
+
+---
 
 ## 📦 Project Structure
 
