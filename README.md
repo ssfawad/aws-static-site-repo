@@ -89,6 +89,8 @@ GitHub → CodePipeline → CodeBuild → S3 → CloudFront → Users
   - Runs CodeBuild (`buildspec.yml` handles S3 deploy + CloudFront invalidation)
   - Instantly updates the live site
 
+![Screenshot](aws-pipeline.png)
+
 ---
 
 ## ✨ Features
