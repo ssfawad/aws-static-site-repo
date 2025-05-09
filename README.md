@@ -30,7 +30,7 @@ Whenever you push a change to the GitHub repository, AWS CodePipeline automatica
 
 ## 📸 Screenshot
 
-![Screenshot](Screenshot%202025-05-08%20195931.png)
+![Screenshot](screenshot.png)
 
 ---
 
