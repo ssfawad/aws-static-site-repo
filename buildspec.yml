@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing dependencies...
+  pre_build:
+    commands:
+      - echo Preparing build...
+  build:
+    commands:
+      - echo Building site...
+      # If you have a build step (like npm run build), add it here.
+      # For pure HTML/CSS/JS, no extra build needed.
+  post_build:
+    commands:
+      - echo Deploying to S3...
+      - aws s3 sync . s3://syedfawad-static-website --delete --exclude ".git/*" --exclude "buildspec.yml"
+      - echo Deployment complete.
+
+artifacts:
+  files:
+    - '**/*'
