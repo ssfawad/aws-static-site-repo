@@ -1,40 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Static Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #4f46e5, #3b82f6);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My AWS Static Portfolio Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    .button {
+      background: white;
+      color: #3b82f6;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
+    }
+    .button:hover {
+      background: #1e40af;
+      color: white;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+    .circle.small { width: 100px; height: 100px; top: 10%; left: 10%; }
+    .circle.medium { width: 150px; height: 150px; bottom: 15%; right: 20%; }
+    .circle.large { width: 200px; height: 200px; top: 40%; right: 10%; }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
 </head>
 <body>
-    <h1>🚀 Welcome to My Static Website!</h1>
-    <p>This site is hosted on AWS S3, delivered globally with CloudFront, and deployed automatically using AWS CodePipeline + CodeBuild.</p>
-    <footer>&copy; 2025 Your Name | Powered by AWS</footer>
+  <div class="circle small"></div>
+  <div class="circle medium"></div>
+  <div class="circle large"></div>
+
+  <h1>🚀 AWS Static Portfolio Site</h1>
+  <p>This site is built with S3, CloudFront, CodePipeline, and CodeBuild — deployed automatically from GitHub with cache invalidation. Welcome to the future of cloud-powered sites!</p>
+  <a class="button" href="https://github.com/ssfawad/aws-static-site-repo" target="_blank">View Code on GitHub</a>
+
+  <footer>&copy; 2025 Syed Fawad | Built with ☕ on AWS</footer>
 </body>
 </html>
